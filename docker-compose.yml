@@ -1,0 +1,19 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows-pc
+    environment:
+      - RAM_SIZE=4G
+      - CPU_CORES=2
+      - DISK_SIZE=64G
+    ports:
+      - "6080:6080"  # noVNC
+      - "3389:3389"  # RDP
+    volumes:
+      - windows-data:/storage
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  windows-data:
