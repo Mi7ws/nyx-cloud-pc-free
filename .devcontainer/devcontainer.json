@@ -1,0 +1,8 @@
+{
+  "name": "Windows Cloud Desktop",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "windows",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [6080, 3389],
+  "postCreateCommand": "echo 'PC Virtual pronto! Acesse http://localhost:6080'"
+}
